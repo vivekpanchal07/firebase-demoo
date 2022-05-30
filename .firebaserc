@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "fir-demo-de576": {
+      "hosting": {
+        "firebase-demoo": [
+          "fir-demo-de576"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "fir-demo-de576"
+  }
+}
