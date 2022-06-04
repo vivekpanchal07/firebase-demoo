@@ -14,12 +14,12 @@ export class AppComponent {
 
   registerUser(value: any) {
     //create data
-    // set(ref(this.database, 'users/' + value.username), {
-    //   username: value.username,
-    //   first_name: value.first_name,
-    //   profile_picture : value.last_name 
-    // }); 
-    // alert('user created!');
+    set(ref(this.database, 'users/' + value.username), {
+      username: value.username,
+      first_name: value.first_name,
+      profile_picture : value.last_name 
+    });   
+    alert('user created!');
 
     // read data
     // const starCountRef = ref(this.database, 'users/' + value.username);
@@ -38,7 +38,7 @@ export class AppComponent {
     // alert('user updated!');  
     
     //remove data
-    remove(ref(this.database, 'users/' + value.username));
-    alert('removed');
+    // remove(ref(this.database, 'users/' + value.username));
+    // alert('removed');
   }
 }
