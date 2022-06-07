@@ -14,20 +14,20 @@ export class AppComponent {
 
   registerUser(value: any) {
     //create data
-    set(ref(this.database, 'users/' + value.username), {
-      username: value.username,
-      first_name: value.first_name,
-      profile_picture : value.last_name 
-    });   
-    alert('user created!');
+    // set(ref(this.database, 'users/' + value.username), {
+    //   username: value.username,
+    //   first_name: value.first_name,
+    //   profile_picture : value.last_name 
+    // });   
+    // alert('user created!');
 
     // read data
-    // const starCountRef = ref(this.database, 'users/' + value.username);
-    // onValue(starCountRef, (snapshot) => {
-    //   const data = snapshot.val();  
+    const starCountRef = ref(this.database, 'users/' + value.username);
+    onValue(starCountRef, (snapshot) => {
+      const data = snapshot.val();  
 
-    //   alert(data.first_name);   
-    // });   
+      alert(data.first_name);   
+    });   
 
     // update data
     // update(ref(this.database, 'users/' + value.username), {
@@ -40,5 +40,9 @@ export class AppComponent {
     //remove data
     // remove(ref(this.database, 'users/' + value.username));
     // alert('removed');
+  }
+
+  readUser(value:any){
+
   }
 }
